@@ -7,7 +7,7 @@ const multiply = (...arr) => arr.reduce((total, number) => {
 }, 1);
 const divide = (a, b) => a / b;
 const operate = (operator,num1,num2) => operator(num1,num2);
-
+const changeNumSign = (a) => -a;
 
 /* Calculator events */
 
@@ -75,7 +75,10 @@ Buttons.forEach(btn => {
             operators[i] = btn.textContent;
             i++  
 
-        } else if (btn.textContent == 'DEL'  ) {
+        /* } 
+        
+        // NEED FIX
+        else if (btn.textContent == 'DEL'  ) {
             let string = OperationView.textContent;
             console.log(string.charAt(-1));
             if ( (numbers.length > operators.length && ResultView!='') || (ResultView=='') ) {
@@ -86,7 +89,7 @@ Buttons.forEach(btn => {
             }
             OperationView.textContent = string.slice(0, -1);
             operators = [];
-            i=0;
+            i=0; */
 
         } else if (btn.textContent == 'AC'  ) {
             OperationView.textContent = '';
