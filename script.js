@@ -1,19 +1,15 @@
+
+/* FUNCTIONS */
 const add = (a, b) => Number(a) + Number(b);
-
 const subtract = (a, b) => (a - b);
-
-
-const multiply = (...arr) => arr.reduce((total, number) => {
+const multiply = (...arr) => arr.reduce((total, number) => { 
     return total * number;
 }, 1);
-
 const divide = (a, b) => a / b;
-
-const sum = (...arr) => arr.reduce((total, number) => {
-    return total + number;
-}, 0);
-
 const operate = (operator,num1,num2) => operator(num1,num2);
+
+
+/* Calculator events */
 
 let numbers = [];
 let operators = [];
@@ -82,7 +78,7 @@ Buttons.forEach(btn => {
         } else if (btn.textContent == 'DEL'  ) {
             let string = OperationView.textContent;
             console.log(string.charAt(-1));
-            if (+string[-1]) {
+            if ( (numbers.length > operators.length && ResultView!='') || (ResultView=='') ) {
                 console.log('yes')
                 numbers[i].splice(numbers[i].length,1);
             } else {
