@@ -86,18 +86,21 @@ Buttons.forEach(btn => {
             
         // Calculations
         } else if (btn.textContent == '=') {
+            
+            if (numbers.length == operators.length) operators.splice(i-1,1);
+
             calculations('&#215',multiply);
             calculations('÷',divide);
             calculations('-',subtract);
             calculations('+',add);
-            numbers[0] = numbers[0].toFixed(9);
+            numbers[0] = Math.round(numbers[0]*Math.pow(10,9))/Math.pow(10,9);
             ResultView.textContent = numbers[0];
             operators = [];
             i=0;
             display();                  
         } 
 
-        console.log(numbers,operators); 
+        // console.log(numbers,operators); 
 
     }) 
 });
