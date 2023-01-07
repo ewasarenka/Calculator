@@ -7,6 +7,7 @@
 
 body {
     display: flex;
+    flex-direction: column;
 }
 
 .cover {
@@ -75,3 +76,22 @@ button:hover {
     text-shadow: none;
 }
   
+
+/*      PORTFOLIO        */
+.portfolio {
+    display: flex;
+    gap: 2rem;
+    margin: auto;
+    margin-top: 20px;
+}
+
+a, a:visited {
+    all: unset;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:  grey;
+}
+    
+a:hover {
+    color:  rgba(128, 128, 128, 0.6);
+}
