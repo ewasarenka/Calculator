@@ -90,6 +90,7 @@ Buttons.forEach(btn => {
             calculations('÷',divide);
             calculations('-',subtract);
             calculations('+',add);
+            numbers[0] = numbers[0].toFixed(9);
             ResultView.textContent = numbers[0];
             operators = [];
             i=0;
