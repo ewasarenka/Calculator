@@ -89,7 +89,7 @@ Buttons.forEach(btn => {
             
             if (numbers.length == operators.length) operators.splice(i-1,1);
 
-            calculations('&#215',multiply);
+            calculations('×',multiply);
             calculations('÷',divide);
             calculations('-',subtract);
             calculations('+',add);
@@ -100,7 +100,6 @@ Buttons.forEach(btn => {
             display();                  
         } 
 
-        // console.log(numbers,operators); 
 
     }) 
 });
